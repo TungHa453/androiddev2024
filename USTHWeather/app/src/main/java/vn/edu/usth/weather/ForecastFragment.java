@@ -61,9 +61,10 @@ public class ForecastFragment extends Fragment {
         // Practical 3: set background color
         View backView = new View(getContext());
         backView.setBackgroundColor(Color.parseColor("#20FF0000"));
-        backView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 10));
+        backView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 1000));
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_forecast, container, false);
+        //View view = inflater.inflate(R.layout.fragment_forecast, container, false);
+        return backView;
     }
 }
