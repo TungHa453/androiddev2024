@@ -21,6 +21,14 @@ public class WeatherActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        //Practical 3: add code
+        // Create a new Fragment to be placed in the activity l
+        ForecastFragment firstFragment = new ForecastFragment();
+        // Add the fragment to the 'container' FrameLayout
+        getSupportFragmentManager().beginTransaction().add(
+                R.id.fragment_container, firstFragment).commit();
+
         Log.i("onCreate", "onCreate");
     }
 
@@ -50,4 +58,6 @@ public class WeatherActivity extends AppCompatActivity {
         super.onDestroy();
         Log.i("onDestroy", "onDestroy");
     }
+
+
 }
