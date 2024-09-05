@@ -5,10 +5,380 @@
              android:layout_height="match_parent"
              tools:context=".ForecastFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="140px"
+            android:background="#3f51b5"
+            android:orientation="horizontal"
+            android:padding="4px">
+        <TextView
+                android:id="@+id/mainTitle"
+                android:layout_width="180px"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="USTH Weather"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textIsSelectable="false"
+                android:textSize="65px"
+                android:textStyle="bold"
+                android:paddingLeft="36px"
+                android:paddingTop="22px"
+                android:paddingBottom="22px"
+                android:paddingRight="22px" />
+    </LinearLayout>
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:orientation="vertical"
+            android:paddingHorizontal="45px"
+            android:paddingVertical="185px">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:background="#5403A9F4"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/day1"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingVertical="38px"
+                    android:text="Mon"
+                    android:textAlignment="center"/>
+
+            <ImageView
+                    android:id="@+id/weaImg1"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sun" />
+
+            <LinearLayout
+                    android:layout_width="370px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/weaCond1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="30px"
+                        android:paddingTop="5px"
+                        android:text="Sunny" />
+
+                <TextView
+                        android:id="@+id/temp1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="30px"
+                        android:paddingTop="5px"
+                        android:text="24°C - 31°C" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:background="#5403A9F4"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/day2"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingVertical="38px"
+                    android:text="Tue"
+                    android:textAlignment="center"/>
+
+            <ImageView
+                    android:id="@+id/weaImg2"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/rain" />
+
+            <LinearLayout
+                    android:layout_width="370px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/weaCond2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="30px"
+                        android:paddingTop="5px"
+                        android:text="Rainy" />
+
+                <TextView
+                        android:id="@+id/temp2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="30px"
+                        android:paddingTop="5px"
+                        android:text="24°C - 30°C" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:background="#5403A9F4"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/day3"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingVertical="38px"
+                    android:text="Wed"
+                    android:textAlignment="center"/>
+
+            <ImageView
+                    android:id="@+id/weaImg3"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/storm" />
+
+            <LinearLayout
+                    android:layout_width="370px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/weaCond3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="30px"
+                        android:paddingTop="5px"
+                        android:text="Huge Storm" />
+
+                <TextView
+                        android:id="@+id/temp3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="30px"
+                        android:paddingTop="5px"
+                        android:text="22°C - 23°C" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:background="#5403A9F4"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/day4"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingVertical="38px"
+                    android:text="Thu"
+                    android:textAlignment="center"/>
+
+            <ImageView
+                    android:id="@+id/weaImg4"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/rain" />
+
+            <LinearLayout
+                    android:layout_width="370px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/weaCond4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="30px"
+                        android:paddingTop="5px"
+                        android:text="Small Rain" />
+
+                <TextView
+                        android:id="@+id/temp1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="30px"
+                        android:paddingTop="5px"
+                        android:text="22°C - 27°C" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:background="#5403A9F4"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/day5"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingVertical="38px"
+                    android:text="Fri"
+                    android:textAlignment="center"/>
+
+            <ImageView
+                    android:id="@+id/weaImg5"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/cloudy" />
+
+            <LinearLayout
+                    android:layout_width="370px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/weaCond5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="30px"
+                        android:paddingTop="5px"
+                        android:text="Cloudy Meatballs" />
+
+                <TextView
+                        android:id="@+id/temp5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="30px"
+                        android:paddingTop="5px"
+                        android:text="22°C - 30°C" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:background="#5403A9F4"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/day6"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingVertical="38px"
+                    android:text="Sat"
+                    android:textAlignment="center"/>
+
+            <ImageView
+                    android:id="@+id/weaImg6"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sun" />
+
+            <LinearLayout
+                    android:layout_width="370px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/weaCond6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="30px"
+                        android:paddingTop="5px"
+                        android:text="Sunny" />
+
+                <TextView
+                        android:id="@+id/temp6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="30px"
+                        android:paddingTop="5px"
+                        android:text="24°C - 31°C" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:background="#5403A9F4"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/day7"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingVertical="38px"
+                    android:text="Sun"
+                    android:textAlignment="center"/>
+
+            <ImageView
+                    android:id="@+id/weaImg7"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sun" />
+
+            <LinearLayout
+                    android:layout_width="370px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/weaCond7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="30px"
+                        android:paddingTop="5px"
+                        android:text="Sunny" />
+
+                <TextView
+                        android:id="@+id/temp7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="30px"
+                        android:paddingTop="5px"
+                        android:text="26°C - 33°C" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

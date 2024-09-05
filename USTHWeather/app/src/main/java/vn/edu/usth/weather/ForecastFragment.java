@@ -60,6 +60,7 @@ public class ForecastFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        /*
         // Practical 3: set background color
         View backView = new View(getContext());
         backView.setBackgroundColor(Color.parseColor("#20FF0000"));
@@ -83,8 +84,11 @@ public class ForecastFragment extends Fragment {
         layout.addView(backView);
         return layout;
 
-        // Inflate the layout for this fragment
-        //View view = inflater.inflate(R.layout.fragment_forecast, container, false);
         //return backView;
+        */
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_forecast, container, false);
+        return view;
+
     }
 }
