@@ -2,7 +2,9 @@ package vn.edu.usth.weather;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,8 +65,26 @@ public class ForecastFragment extends Fragment {
         backView.setBackgroundColor(Color.parseColor("#20FF0000"));
         backView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 1000));
 
+        // Practical 4: Dynamic view
+        // main LinearLayout
+        LinearLayout layout = new LinearLayout(getContext());
+        layout.setOrientation(LinearLayout.VERTICAL);
+        // textView
+        TextView day = new TextView(getContext());
+        day.setText("Thursday");
+        day.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        // imageView
+        ImageView img = new ImageView(getContext());
+        img.setImageResource(R.drawable.sun);
+        img.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        // add to layout
+        layout.addView(day);
+        layout.addView(img);
+        layout.addView(backView);
+        return layout;
+
         // Inflate the layout for this fragment
         //View view = inflater.inflate(R.layout.fragment_forecast, container, false);
-        return backView;
+        //return backView;
     }
 }
