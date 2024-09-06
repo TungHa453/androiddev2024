@@ -29,6 +29,11 @@ public class WeatherActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().add(
                 R.id.fragment_container, firstFragment).commit();
 
+        // Practical 6: add WeatherFragment
+        WeatherFragment secondFragment = new WeatherFragment();
+        getSupportFragmentManager().beginTransaction().add(
+                R.id.fragment_weather, secondFragment).commit();
+
         Log.i("onCreate", "onCreate");
     }
 
@@ -58,6 +63,5 @@ public class WeatherActivity extends AppCompatActivity {
         super.onDestroy();
         Log.i("onDestroy", "onDestroy");
     }
-
 
 }

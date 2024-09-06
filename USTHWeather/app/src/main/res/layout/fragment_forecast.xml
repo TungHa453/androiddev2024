@@ -3,37 +3,15 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
+             android:id="@+id/fragment_container"
              tools:context=".ForecastFragment">
 
-    <LinearLayout
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="140px"
-            android:background="#3f51b5"
-            android:orientation="horizontal"
-            android:padding="4px">
-        <TextView
-                android:id="@+id/mainTitle"
-                android:layout_width="180px"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:text="USTH Weather"
-                android:textAlignment="textStart"
-                android:textColor="@color/white"
-                android:textIsSelectable="false"
-                android:textSize="65px"
-                android:textStyle="bold"
-                android:paddingLeft="36px"
-                android:paddingTop="22px"
-                android:paddingBottom="22px"
-                android:paddingRight="22px" />
-    </LinearLayout>
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:paddingHorizontal="45px"
-            android:paddingVertical="185px">
+            android:paddingVertical="0px">
 
         <LinearLayout
                 android:layout_width="match_parent"
@@ -48,6 +26,7 @@
                     android:layout_weight="1"
                     android:paddingVertical="38px"
                     android:text="Mon"
+                    android:textColor="@color/black"
                     android:textAlignment="center"/>
 
             <ImageView
@@ -71,6 +50,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30px"
                         android:paddingTop="5px"
+                        android:textColor="@color/black"
                         android:text="Sunny" />
 
                 <TextView
@@ -80,6 +60,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30px"
                         android:paddingTop="5px"
+                        android:textColor="@color/black"
                         android:text="24°C - 31°C" />
             </LinearLayout>
 
@@ -97,6 +78,7 @@
                     android:layout_weight="1"
                     android:paddingVertical="38px"
                     android:text="Tue"
+                    android:textColor="@color/black"
                     android:textAlignment="center"/>
 
             <ImageView
@@ -120,6 +102,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30px"
                         android:paddingTop="5px"
+                        android:textColor="@color/black"
                         android:text="Rainy" />
 
                 <TextView
@@ -129,6 +112,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30px"
                         android:paddingTop="5px"
+                        android:textColor="@color/black"
                         android:text="24°C - 30°C" />
             </LinearLayout>
 
@@ -146,6 +130,7 @@
                     android:layout_weight="1"
                     android:paddingVertical="38px"
                     android:text="Wed"
+                    android:textColor="@color/black"
                     android:textAlignment="center"/>
 
             <ImageView
@@ -169,6 +154,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30px"
                         android:paddingTop="5px"
+                        android:textColor="@color/black"
                         android:text="Huge Storm" />
 
                 <TextView
@@ -178,6 +164,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30px"
                         android:paddingTop="5px"
+                        android:textColor="@color/black"
                         android:text="22°C - 23°C" />
             </LinearLayout>
 
@@ -195,6 +182,7 @@
                     android:layout_weight="1"
                     android:paddingVertical="38px"
                     android:text="Thu"
+                    android:textColor="@color/black"
                     android:textAlignment="center"/>
 
             <ImageView
@@ -218,15 +206,17 @@
                         android:layout_weight="1"
                         android:paddingLeft="30px"
                         android:paddingTop="5px"
+                        android:textColor="@color/black"
                         android:text="Small Rain" />
 
                 <TextView
-                        android:id="@+id/temp1"
+                        android:id="@+id/temp4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:paddingLeft="30px"
                         android:paddingTop="5px"
+                        android:textColor="@color/black"
                         android:text="22°C - 27°C" />
             </LinearLayout>
 
@@ -244,6 +234,7 @@
                     android:layout_weight="1"
                     android:paddingVertical="38px"
                     android:text="Fri"
+                    android:textColor="@color/black"
                     android:textAlignment="center"/>
 
             <ImageView
@@ -267,6 +258,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30px"
                         android:paddingTop="5px"
+                        android:textColor="@color/black"
                         android:text="Cloudy Meatballs" />
 
                 <TextView
@@ -276,6 +268,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30px"
                         android:paddingTop="5px"
+                        android:textColor="@color/black"
                         android:text="22°C - 30°C" />
             </LinearLayout>
 
@@ -293,6 +286,7 @@
                     android:layout_weight="1"
                     android:paddingVertical="38px"
                     android:text="Sat"
+                    android:textColor="@color/black"
                     android:textAlignment="center"/>
 
             <ImageView
@@ -316,6 +310,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30px"
                         android:paddingTop="5px"
+                        android:textColor="@color/black"
                         android:text="Sunny" />
 
                 <TextView
@@ -325,6 +320,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30px"
                         android:paddingTop="5px"
+                        android:textColor="@color/black"
                         android:text="24°C - 31°C" />
             </LinearLayout>
 
@@ -342,6 +338,7 @@
                     android:layout_weight="1"
                     android:paddingVertical="38px"
                     android:text="Sun"
+                    android:textColor="@color/black"
                     android:textAlignment="center"/>
 
             <ImageView
@@ -365,6 +362,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30px"
                         android:paddingTop="5px"
+                        android:textColor="@color/black"
                         android:text="Sunny" />
 
                 <TextView
@@ -374,6 +372,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30px"
                         android:paddingTop="5px"
+                        android:textColor="@color/black"
                         android:text="26°C - 33°C" />
             </LinearLayout>
 
