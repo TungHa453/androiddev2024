@@ -8,6 +8,7 @@
     <dimen name="header_padding">22px</dimen>
     <dimen name="header_padding_left">36px</dimen>
     <dimen name="margin_padding">45px</dimen>
+    <dimen name="margin_text_padding">85px</dimen>
     <dimen name="weather_layout_height">600px</dimen>
     <dimen name="weather_img_layout">500px</dimen>
     <dimen name="weather_margin_top">185px</dimen>
