@@ -3,10 +3,6 @@
     <dimen name="frag_empty_text">90px</dimen>
     <dimen name="smol_pad">4px</dimen>
     <dimen name="usth_header_height">140px</dimen>
-    <dimen name="header_text_width">180px</dimen>
-    <dimen name="header_text_size">65px</dimen>
-    <dimen name="header_padding">22px</dimen>
-    <dimen name="header_padding_left">36px</dimen>
     <dimen name="margin_padding">45px</dimen>
     <dimen name="margin_text_padding">85px</dimen>
     <dimen name="weather_layout_height">600px</dimen>
@@ -14,7 +10,7 @@
     <dimen name="weather_margin_top">185px</dimen>
     <dimen name="weather_text_size">55px</dimen>
     <dimen name="weaCond_marginTop">55px</dimen>
-    <dimen name="forecast_paddingTop">835px</dimen>
+    <dimen name="forecast_paddingTop">690px</dimen>
     <dimen name="forecast_height">130px</dimen>
     <dimen name="daytxt_width">0px</dimen>
     <dimen name="daytxt_padding">38px</dimen>
