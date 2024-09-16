@@ -34,7 +34,7 @@
                  android:layout_marginLeft="@dimen/margin_padding"
                  android:layout_marginRight="@dimen/margin_padding"
                  android:padding="@dimen/margin_text_padding"
-                 android:background="@drawable/frame">
+                 android:background="@drawable/frame" >
         <TextView
                 android:id="@+id/temp"
                 android:layout_width="wrap_content"
