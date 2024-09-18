@@ -108,7 +108,8 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
         if (itemId == R.id.action_refresh) {
-            Toast.makeText(this, "Refresh", Toast.LENGTH_SHORT).show();
+            // Toast.makeText(this, "Refresh", Toast.LENGTH_SHORT).show();
+            netReqSim();
             return true;
         } else if (itemId == R.id.action_settings) {
             startActivity(new Intent(this, PrefActivity.class));
@@ -117,6 +118,26 @@ public class WeatherActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    private void netReqSim() {
+        Toast.makeText(this, "Refreshing...", Toast.LENGTH_SHORT).show();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(2000);
+                    runOnUiThread((new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(WeatherActivity.this, "Refreshed", Toast.LENGTH_SHORT).show();
+                        }
+                    }));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
+    
     // Practical 2
     @Override
     public void onStart() {
