@@ -2,6 +2,7 @@ package vn.edu.usth.weather;
 
 import android.content.pm.PackageManager;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import android.preference.PreferenceActivity;
@@ -108,8 +109,8 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
         if (itemId == R.id.action_refresh) {
-            // Toast.makeText(this, "Refresh", Toast.LENGTH_SHORT).show();
-            netReqSim();
+            Toast.makeText(this, "Refreshing...", Toast.LENGTH_SHORT).show();
+            new netReqSim().execute();
             return true;
         } else if (itemId == R.id.action_settings) {
             startActivity(new Intent(this, PrefActivity.class));
@@ -118,27 +119,31 @@ public class WeatherActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void netReqSim() {
-        Toast.makeText(this, "Refreshing...", Toast.LENGTH_SHORT).show();
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(2000);
-                    runOnUiThread((new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(WeatherActivity.this, "Refreshed", Toast.LENGTH_SHORT).show();
-                        }
-                    }));
-                } catch (InterruptedException e) {
+    // Changing this into AsyncTask compatible (Practical 14)
+    private class netReqSim extends AsyncTask<Void, Void, String> {
+        @Override
+        protected String doInBackground(Void... voids) {
+            try {
+                Thread.sleep(2000);
+                /* 50% chance of failure for testing
+                if (Math.random() < 0.5) {
+                    return "Refresh Failed";
+                }*/
+                return "Refreshed";
+            } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
+                    return "Refresh Failed";
             }
-        }).start();
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            Toast.makeText(WeatherActivity.this, result, Toast.LENGTH_SHORT).show();
+        }
     }
 
-    
+
+
     // Practical 2
     @Override
     public void onStart() {
