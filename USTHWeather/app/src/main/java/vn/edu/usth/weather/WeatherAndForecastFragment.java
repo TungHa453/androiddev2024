@@ -5,6 +5,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
+import android.util.Log;
+import android.widget.ImageView;
+
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -12,6 +21,7 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class WeatherAndForecastFragment extends Fragment {
+    private ImageView logo;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,7 +66,37 @@ public class WeatherAndForecastFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_weather_and_forecast, container, false);
+        View view = inflater.inflate(R.layout.fragment_weather_and_forecast, container, false);
+        logo = view.findViewById(R.id.logo);
+        new LogoUSTH().execute("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png");
+        return view;
+    }
+
+    private class LogoUSTH extends AsyncTask<String, Void, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(String... urls) {
+            Bitmap bitmap = null;
+            try {
+                URL url = new URL(urls[0]);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestMethod("GET");
+                connection.setDoInput(true);
+                connection.connect();
+                int response = connection.getResponseCode();
+                Log.i("USTHWeather", "The response is: " + response);
+                InputStream is = connection.getInputStream();
+                bitmap = BitmapFactory.decodeStream(is);
+                connection.disconnect();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return bitmap;
+        }
+
+        protected void onPostExecute(Bitmap result) {
+            if (result != null) {
+                logo.setImageBitmap(result);
+            }
+        }
     }
 }
